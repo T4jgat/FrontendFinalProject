@@ -17,7 +17,7 @@ main{
     display: flex;
 }
 .navbar-brand{
-    color: #787ff6;
+    color: white;
     font-size:26px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -25,7 +25,7 @@ main{
 }
 
 .navbar-brand:hover{
-    color: white;
+    color: #787ff6;
 }
 .navbar-toggler{
     border: none;

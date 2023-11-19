@@ -19,7 +19,7 @@ main{
 
 
 .navbar-brand{
-    color: #787ff6;
+    color: white;
     font-size:26px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -27,7 +27,7 @@ main{
     transition: 0.3s ease-in;
 }
 .navbar-brand:hover{
-    color: white;
+    color: #787ff6;
 }
 .navbar-toggler{
     border: none;
@@ -37,7 +37,7 @@ main{
     text-align: center;
     position: relative;
     margin-left: 20%;
-    color: #787ff6;
+    color: white;
     right: 20px;
     border: 2px solid #787ff6;;
     background: transparent;
@@ -69,7 +69,7 @@ main{
 }
 
 .navbar-nav .nav-link{
-    color: #787ff6;
+    color: white;
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -79,8 +79,7 @@ main{
 }
 
 .navbar-nav .nav-link:hover{
-    color: white;
-    text-decoration: underline solid 3px rgb(255, 255, 255);
+    text-decoration: underline solid 3px #787ff6;
 }
 
 
@@ -94,7 +93,7 @@ main{
 }
 
 .dropdown-menu li a{
-    color: #787ff6;
+    color: white;
     margin-left: 10px;
     transition: 0.3s ease-in;
 }
@@ -102,7 +101,7 @@ main{
 .dropdown-menu li a:hover{
     background: transparent;
     color: white;
-    text-decoration: underline solid white;
+    text-decoration: underline solid #787ff6;
     font-size: 20px;
     transition: all 0.1s ease-out;
 }
@@ -146,11 +145,11 @@ footer p{
     border: 2px solid #787ff6;
 }
 .carousel a{
-    color: #787ff6;
+    color: white;
     font-size: 14px;
 }
 .carousel a:hover{
-    color: white;
+    color: #787ff6;
     text-decoration: underline solid white;
     font-size: 16px;
 }
