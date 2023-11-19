@@ -2,44 +2,79 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
 }
+
 .navbar{
-    background: blue;
+    background:#273748;
+    position: relative;
+    display: flex;
 }
 
 
 .navbar-brand{
-    color: black;
+    color: white;
     font-size:26px;
-    font-weight:bold;
+    font-weight: 600;
     letter-spacing: 1px;
     margin-right: 30%;
 }
 
 .navbar-nav .nav-link{
-    color: black;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 18px;
     justify-content: space-evenly;
     align-items: flex-end;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
-.navbar-nav .nav-link:hover {
-    text-decoration: underline;
-    color: #ffffff;
-    font-size: 18px;
+.navbar-nav .nav-link:hover{
+    text-decoration: underline solid 3px blue;
 }
+
 main{
     height: 800px;
+    background:#273748;
+}
 
+
+.dropdown-menu{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.dropdown-menu li a{
+    color: white;
+    margin-left: 10px;
+}
+
+.dropdown-menu li a:hover{
+    background: transparent;
+    color: white;
+    text-decoration: underline solid blue;
+    font-size: 20px;
+    transition: all 0.1s ease-out;
+}
+
+
+.nav-item{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    line-height: 60px;
+    text-align: center;
 }
 
 footer{
-    background-color: transparent;
-    backdrop-filter: blur(16px);
     color: black;
+    background: white;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -48,7 +83,7 @@ footer{
 
 footer img{
     width: 180px;
-    height: auto;
+    height: 90px;
 }
 footer p{
     font-size: 16px;
