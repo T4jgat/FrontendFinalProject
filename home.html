@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Smooch+Sans&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,9 +26,9 @@
   <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">STYLISH STEPS</a>
+          <a class="navbar-brand" href="#"><img src="img/shoes-3.png" alt="">&nbsp;STYLISH STEPS</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars" style="color: #787ff6;"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -43,13 +46,16 @@
                   SOCIAL LINKS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-instagram" style="color: black;"></i> Instagram</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook" style="color: black;"></i> Facebook</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-tiktok" style="color: black;"></i> TikTok</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-instagram" style="color: #787ff6;"></i> Instagram</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-facebook" style="color: #787ff6;"></i> Facebook</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-brands fa-tiktok" style="color: #787ff6;"></i> TikTok</a></li>
                 </ul>
               </li>
             </ul>
+            <button id="signIn" class="nav-link signInBtn">SIGN IN</button>
+
           </div>
+          
         </div>
       </nav>
   </header>
@@ -100,7 +106,7 @@
         <div class="slider__item">
           <img class="slider__image" src="img/sneaker5.png" alt="Image">
           <div class="slider__info">
-            <h2>Adidas Super Sleek Chunky</h2>
+            <h2>Nike Air Force 1 07 LV8 <br> 'What The LA'</h2>
           </div>
         </div>
         <div class="slider__item">
@@ -135,8 +141,10 @@
         </div>
       </div>
     </div>
+    <button id="buyNowBtn" class="buyBtn">BUY NOW</button>
+    
   </section>
-
+  <button onclick="scrollToTop()" id="scroll" class="scrollTop"><i class="fa-solid fa-arrow-up" style="color: #000000;"></i></button>
 </main>
 
 <footer class="bg-light py-3 h-100">
@@ -181,7 +189,6 @@
         <img id="fullscreen-image"  class="fullscreen-image" alt="Fullscreen Image">
     </div>
     </article>
-    
   </div>
 </footer>
   <!-- Bootstrap JavaScript Libraries -->
