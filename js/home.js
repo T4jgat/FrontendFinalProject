@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var fullscreenModal = document.getElementById('fullscreen-modal');
         fullscreenModal.style.display = 'none';
     };
+    
 });
 
 let mybutton = document.getElementById("scroll");
@@ -55,3 +56,72 @@ function microsoft(){
 }
 
 var continuee = document.getElementById('continueBtn');
+
+function errPage(){
+  window.location.href = "404.html"
+}
+
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+
+function modalPage() {
+  document.getElementById('myModall').style.display = 'block';
+}
+
+function closeModall() {
+  document.getElementById('myModall').style.display = 'none';
+}
+
+let signinForm = document.querySelector('.signin_container');
+let email = document.getElementById('emailInput');
+let pass = document.getElementById('passInput');
+
+signinForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  console.log("Email: ", email.value);
+  console.log("Pass: ", pass.value);
+})
+
+function validation(){
+    if(document.FormFill.Email.value !== "park.pavel74@gmail.com"){
+      document.getElementById('result').innerHTML = "Email is not correct";
+      return false;
+    }
+    else if(document.FormFill.Password.value !== "123"){
+      document.getElementById('result').innerHTML = "Password is not correct";
+      return false;
+    }
+    else{
+      const notification = document.querySelector('.notification');
+      notification.classList.remove('none');
+      notification.classList.toggle('hide');
+
+      setTimeout(() => {
+        notification.classList.add('hide');
+    }, 5000);
+
+    document.addEventListener("click", (event) => {
+      const isClickInsideNotification = notification.contains(event.target);
+      if (!isClickInsideNotification) {
+          notification.classList.add('hide');
+      }
+  });
+    }
+}
