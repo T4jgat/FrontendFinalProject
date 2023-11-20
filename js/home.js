@@ -100,15 +100,21 @@ signinForm.addEventListener("submit", (e) => {
 })
 
 function validation(){
-    if(document.FormFill.Email.value !== "park.pavel74@gmail.com"){
+  if(document.FormFill.Email.value == ""){
+    document.getElementById('result').innerHTML = "Input Email";
+  } 
+  else if(document.FormFill.Password.value == ""){
+    document.getElementById('result').innerHTML = "Input Password";
+  }
+  else if(document.FormFill.Email.value !== "park.pavel74@gmail.com"){
       document.getElementById('result').innerHTML = "Email is not correct";
       return false;
     }
-    else if(document.FormFill.Password.value !== "123"){
+  else if(document.FormFill.Password.value !== "123"){
       document.getElementById('result').innerHTML = "Password is not correct";
       return false;
     }
-    else{
+  else{
       const notification = document.querySelector('.notification');
       notification.classList.remove('none');
       notification.classList.toggle('hide');
