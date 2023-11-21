@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif;
     scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+  width: 0;
 }
+}
+
 
 main{
     height: 1010px;
@@ -529,3 +533,134 @@ footer p{
     font-size: 1.2rem;
     list-style: none;
 }
+
+
+@media (min-width: 1200px) { 
+    .main_text p{
+        width: 420px;
+    }
+    .main_content img{
+        width: 410px;
+    }
+    .navbar .nav-link{
+        font-size: 10px;
+    }
+
+    .navbar-brand{
+        font-size: 14px;
+    }
+
+    .buyBtn{
+        width: 132px;
+        height: 32px;
+    }
+
+    .slider{
+        width: 85%;
+    }
+    .main_content .list-group{
+        margin-top: 40%;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .main_text h1{
+        font-size: 75px;
+    }
+    .main_text p{
+        width: 430px;
+    }
+    .main_content img{
+        width: 325px;
+    }
+
+    .navbar-brand{
+        font-size: 17px;
+    }
+
+    .buyBtn{
+        width: 132px;
+        height: 32px;
+    }
+
+    .slider{
+        width: 85%;
+    }
+    .main_content .list-group{
+        margin-top: 40%;
+    }
+
+    .navbar-toggler{
+
+    }
+    
+    .navbar .nav-link{
+    }
+ }
+
+ @media (max-width: 768px) { 
+    .main_text h1{
+        font-size: 70px;
+    }
+    .main_text p{
+        width: 230px;
+    }
+    .main_content img{
+        width: 240px;
+        margin-right: 40px;
+    }
+
+    .navbar-brand{
+        font-size: 17px;
+    }
+
+    .buyBtn{
+        width: 132px;
+        height: 32px;
+    }
+
+    .slider{
+        width: 65%;
+    }
+    .main_content .list-group{
+        margin-top: 40%;
+    }
+
+    .carousel{
+        font-size: 23px;
+    }
+ }
+
+ @media (min-width: 576px) { 
+    .main_text h1{
+        font-size: 70px;
+    }
+    .main_text p{
+        width: 215px;
+    }
+    .main_text h1 span{
+        font-size: 53px;
+    }
+    .main_content img{
+        width: 220px;
+        margin-right: 40px;
+    }
+
+    .navbar-brand{
+        font-size: 17px;
+    }
+
+    .buyBtn{
+        width: 132px;
+        height: 32px;
+    }
+
+    .slider{
+        width: 75%;
+    }
+    .main_content .list-group{
+        margin-top: 45%;
+    }
+  }
+
