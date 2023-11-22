@@ -94,3 +94,7 @@ h3 {
 .card-text {
     color: black;
 }
+
+main {
+    height: 1250px;
+}
