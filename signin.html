@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Smooch+Sans&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,26 +44,27 @@
       </nav>
   </header>
 
-  <div class="container">
+  <form class="signin_container" name="FormFill">
 		<div class="row" style="margin-top: 80px;">
 			<div class="center">
         <a class="navbar-brand" href="home.html"><i class="fa-solid fa-shoe-prints" style="color: #ffffff;"></i>&nbsp;STYLISH STEPS</a>
 			</div>
 		</div>
+		<p id="result"></p>
 		<div class="row" style="margin-top: 15px;">
 			<div class="col-12 center">
-				<input type="email" placeholder="Email address">
+				<input type="email" placeholder="Email address" name="Email" id="emailInput">
 			</div>
 		</div>
     <div class="row" style="margin-top: 20px;">
 			<div class="col-12 center">
-				<input type="password" placeholder="Password">
+				<input type="password" placeholder="Password" name="Password" id="passInput">
 			</div>
 		</div>
 		<div class="row" style="margin-top: 25px;">
 			<div>
 				<div class="col-12 center">
-					<button class="continue" id="continueBtn">Continue</button>
+					<button class="continue" id="continueBtn" onclick="return validation()">Continue</button>
 				</div>
 			</div>
 		</div>
@@ -100,7 +104,16 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		<figure class="notification hide none">
+            <div class="notification__body">
+                <div class="notification__body__first">
+                    <p>
+                        SUCCESS &#128640;
+                    </p>
+                </div>
+            </div>
+        </figure>
+	</form>
   </main>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

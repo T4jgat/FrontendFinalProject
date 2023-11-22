@@ -19,10 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Smooch+Sans&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital@1&family=Kanit:ital@1&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main>
+  <main >
   <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -60,7 +63,6 @@
       </nav>
   </header>
 
-
   <section class="container-cont">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -76,7 +78,7 @@
     </div>
 
 
-    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 100px;">
       <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
         <div class="slider__item">
           <img class="slider__image" src="img/sneaker1.png" alt="Image">
@@ -141,12 +143,53 @@
         </div>
       </div>
     </div>
-    <button id="buyNowBtn" class="buyBtn">BUY NOW</button>
-    
+    <button id="buyNowBtn" class="buyBtn" onclick="modalPage()">BUY NOW</button>
+  </div>
   </section>
+  <div id="myModall" class="modall">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModall()">&times;</span>
+        <p>We Apologize <br>
+          The page is currently unavailable...</p>
+          <img src="img/cat-cute.gif" alt="">
+    </div>
   <button onclick="scrollToTop()" id="scroll" class="scrollTop"><i class="fa-solid fa-arrow-up" style="color: #000000;"></i></button>
+
 </main>
 
+<section class="shop-container">
+  <div class="wrap">
+    <div class="element-animation">
+      <div class="main_content">
+      <div class="main_text">
+        <h1>NIKE<br><span>Collection</span></h1>
+        <p>
+          Nike, Inc., American sportswear company that is one of the world’s best-known brands.
+          It was founded in 1964 as Blue Ribbon Sports by Phil Knight and Bill Bowerman, his former track-and-field coach at the University of Oregon. 
+          The company was renamed Nike, Inc., in 1971, and it went public in 1980. By the early 21st century, 
+          Nike had retail outlets and distributors in more than 170 countries, and its logo—a curved check mark called the “swoosh”—was recognized throughout the world.
+        </p>
+        <ul class="list-group">
+          <li class="list-group-item"><a href=""></a>Innovative Design</li>
+          <li class="list-group-item"><a href=""></a>Comfort</li>
+          <li class="list-group-item"><a href=""></a>Athlete Endorsements</li>
+        </ul>
+    </div>
+    <div class="main_image">
+        <img src="img/sneaker12.png">
+    </div>
+    </div>
+  </div>
+</div>
+<div id="myModall" class="modall">
+  <div class="modal-content">
+      <span class="close-btn" onclick="closeModall()">&times;</span>
+      <p>We Apologize <br>
+        The page is currently unavailable...</p>
+        <img src="img/cat-cute.gif" alt="">
+  </div>
+</div>
+</section>
 <footer class="bg-light py-3 h-100">
   <img src="img/footer.png" alt="">
   <p>CREATED BY:</p><br>
@@ -183,11 +226,14 @@
         <li><a href="https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"><i class="fa-brands fa-linkedin" style="color: black;"></i></a></li>
         <li><a href=""><i class="fa-brands fa-github" style="color: #000000;"></i></a></li>
       </ul>
+
+      
       <!-- Modal Box -->
       <div id="fullscreen-modal">
         <span class="close-modal" onclick="closeFullscreenModal()"><i class="fa-solid fa-xmark" style="color: #f0f0f0;"></i></span>
         <img id="fullscreen-image"  class="fullscreen-image" alt="Fullscreen Image">
     </div>
+    
     </article>
   </div>
 </footer>
