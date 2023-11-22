@@ -534,4 +534,18 @@ footer p{
     list-style: none;
 }
 
-
+#topBtn{
+  position: fixed;
+  bottom: 20px; 
+  right: 30px;   
+  z-index: 99; 
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(25px);
+  font-size: 32px;
+}

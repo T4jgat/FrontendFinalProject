@@ -19,12 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
       var fullscreenModal = document.getElementById('fullscreen-modal');
       fullscreenModal.style.display = 'none';
   };
-  
+  let toTop = document.getElementById("topBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+};
+
 });
 
 function signinPage(){
 window.location.href = "signin.html"
 }
+
+function catalogPage(){
+  window.location.href = "catalog.html"
+  }
 
 function homePage(){
 window.location.href = "home.html"
@@ -116,3 +129,17 @@ function validation(){
 
   }
 }
+
+
+function signupPage(){
+  window.location.href = "signup.html";
+}
+
+//SCROLL TO TOP
+function topPage() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+
+// Sign up
+

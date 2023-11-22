@@ -5,3 +5,11 @@ function openForm() {
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
+
+function homePage(){
+    window.location.href = "home.html";
+}
+
+function signinPage(){
+    window.location.href = "signin.html"
+    }
