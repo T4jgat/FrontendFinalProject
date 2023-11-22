@@ -13,3 +13,6 @@ function homePage(){
 function signinPage(){
     window.location.href = "signin.html"
     }
+function signinPage() {
+    window.location.href = "signin.html"
+}
