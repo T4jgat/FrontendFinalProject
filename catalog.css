@@ -98,3 +98,9 @@ h3 {
 main {
     height: 1250px;
 }
+
+.title-price {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
