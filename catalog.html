@@ -19,7 +19,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="catalog.css">
 
-    <title>Document</title>
+    <title>Catalog</title>
 </head>
 
 <body>
@@ -160,21 +160,22 @@
         </div>
 
 
-        <button class="open-button" onclick="openForm()">Chat</button>
 
-        <div class="chat-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-                <i class="fa-solid fa-chalkboard-user"></i>
-                <h3>Chat with us</h3>
-
-                <label for="msg">Message</label>
-                <textarea placeholder="Type message.." name="msg" required></textarea>
-
-                <button type="submit" class="btn">Send</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
-        </div>
     </main>
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <h3>Chat with us</h3>
+
+            <label for="msg">Message</label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 
 
     <footer class="bg-light py-3 h-100">
