@@ -111,8 +111,9 @@ main {
     main {
         height: 4100px;
     }
+}
 
-.box{
+.box {
     height: 60px;
     display: flex;
     position: absolute;
@@ -125,11 +126,11 @@ main {
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
 }
 
-.box:hover input{
+.box:hover input {
     width: 400px;
 }
 
-.box input{
+.box input {
     width: 0;
     outline: none;
     border: none;
@@ -138,7 +139,7 @@ main {
     background: transparent;
 }
 
-.box .fa-solid{
+.box .fa-solid {
     font-size: 18px;
     color: #1974D2;
 }
