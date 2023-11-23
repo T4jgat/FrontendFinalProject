@@ -17,7 +17,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Smooch+Sans&family=Ubuntu:ital,wght@1,500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <title>Document</title>
 </head>
@@ -47,7 +49,7 @@
                                 <a class="nav-link" aria-current="page" onclick="homePage()">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">CONTACT US</a>
+                                <a class="nav-link" href="#">CONTACT US</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -73,94 +75,70 @@
 
 
 
-        <div class="content">
-            <section id="catalog">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_10_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 1">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Nike Air Max 95</h5>
-                                        <p class="price">$123.44</p>
-                                    </div>
-                                    <p class="card-text">Blue 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_1_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 2">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Nike kd 9</h5>
-                                        <div class="price">$93.95</div>
-                                    </div>
-                                    <p class="card-text">Sneakers for Basketball</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_2_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 2">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Nike Huarache</h5>
-                                        <div class="price">$320.25</div>
-                                    </div>
-                                    <p class="card-text">Grey 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_3_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 2">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Promili Prima</h5>
-                                        <div class="price">$39.79</div>
-                                    </div>
-                                    <p class="card-text">Advendure</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_4_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 2">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Nike Air Max 97</h5>
-                                        <div class="price">$99.99</div>
-                                    </div>
-                                    <p class="card-text">Street style</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="card">
-                                <img src="img/Snekear_Catalog_5_2023-11-21_22-47-37.jpg" class="card-img-top"
-                                    alt="Item 2">
-                                <div class="card-body">
-                                    <div class="title-price">
-                                        <h5 class="card-title">Nike Air Zoom</h5>
-                                        <div class="price">$55.59</div>
-                                    </div>
-                                    <p class="card-text">Skateboard sneakers</p>
-                                </div>
-                            </div>
-                        </div>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">Contact Us</div>
+          <div class="card-body">
 
-                        <!-- Add more card elements for other items in the catalog -->
-                    </div>
+            <form id="contactForm">
+              <!-- Step 1 -->
+              <div class="step active" id="step1">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" required>
                 </div>
-            </section>
+                <button type="button" class="btn btn-primary" onclick="nextStep('step1', 'step2')">Next</button>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step" id="step2">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="prevStep('step2', 'step1')">Previous</button>
+                <button type="button" class="btn btn-primary" onclick="nextStep('step2', 'step3')">Next</button>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step" id="step3">
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="prevStep('step3', 'step2')">Previous</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
+
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+    function nextStep(currentStep, nextStep) {
+      document.getElementById(currentStep).classList.remove('active');
+      document.getElementById(nextStep).classList.add('active');
+    }
+
+    function prevStep(currentStep, prevStep) {
+      document.getElementById(currentStep).classList.remove('active');
+      document.getElementById(prevStep).classList.add('active');
+    }
+  </script>
+
+
+
+
+
 
 
         <button class="open-button" onclick="openForm()">Chat</button>
