@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+main{
+    height: 1200px;
+    background: #010517;
+}
+
+.navbar{
+    background: transparent;
+    position: relative;
+    display: flex;
+}
+.navbar-brand{
+    color: white;
+    font-size:26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in;
+}
+
+.navbar-brand:hover{
+    color: #787ff6;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-nav .nav-link{
+    color: #787ff6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    transition: 0.2s ease-in;
+}
+.nav-item{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover{
+    color: white;
+    text-decoration: underline solid 3px rgb(255, 255, 255);
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.title{
+    font-weight: 700;
+    height: 52px;
+    font-size: 35px;
+    font-family: "ColfaxAI",-apple-system,BlinkMacSystemFont,Helvetica,sans-serif;
+}
+input{
+    width:350px;
+    height: 58px;
+    outline: none;
+    padding-left: 18px;
+}
+input::placeholder{
+    font-size: 19px;
+}
+.continue{
+    width: 350px;
+    height: 58px;
+    background: white;
+    color:black;
+    border: none;
+    font-size: 19px;
+    border-radius: 3px;
+    transition: 0.4s ease-out;
+}
+.continue:hover{
+    background: #787ff6;
+    color: white;
+    transform: translateY(-7%);
+}
+a{
+    text-decoration: none;
+    color:red;
+}
+
+a:hover{
+    color: #787ff6;
+}
+.continue1{
+    width: 350px;
+    height: 58px;
+    background:#787ff6;
+    color:white;
+    font-size: 1.1rem;
+    text-align: start 10px;
+    border-width: thin;
+    border-color: black !important;
+}
+
+.col-12 p{
+    color: white;
+}
+
+
+.col-12 h5{
+    color: white;
+}
+
+
+#result{
+    color: red;
+    margin-left: 40.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.notification {
+    position: absolute;
+    bottom: 16px;
+    padding: 0px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-left: 46%;
+    margin-bottom: 10px;
+    background-color: #327b3280;
+    color: white;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInAnimation ease-in-out 0.25s forwards;;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),
+                0px 6px 10px 0px rgba(0,0,0,0.14),
+                0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+.none {
+    display: none;
+}
+
+.hide {
+    visibility: hidden;
+    animation: fadeOutAnimation ease-in-out 0.25s forwards;
+}
+
+.notification__body {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+}
+
+.notification__body__first {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+    align-items: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    gap: 8px;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        min-height: 40px;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        min-height: 60px;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        min-height: 60px;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        min-height: 40px;
+        visibility: hidden;
+    }
+}
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}

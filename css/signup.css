@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+main{
+    height: 1200px;
+    background: #010517;
+    grid-column: auto;
+}
+
+.navbar{
+    background: transparent;
+    position: relative;
+    display: flex;
+}
+.navbar-brand{
+    color: white;
+    font-size:26px;
+    font-weight: 600;
+    margin-left: 30%;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in;
+}
+
+.navbar-brand:hover{
+    color: #787ff6;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-nav .nav-link{
+    color: #787ff6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    transition: 0.2s ease-in;
+}
+.nav-item{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover{
+    color: white;
+    text-decoration: underline solid 3px rgb(255, 255, 255);
+}
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#video {
+    width: 100%;
+    height: 100%;
+}
+
+
+.card{
+    background: rgba(83, 83, 83, 0.581);
+    color: #787ff6;
+}
+
+
+.card button{
+    background: #787ff6;
+    color: white;
+    border: none;
+}
+
+.text-body{
+    color: red;
+}
+
+
+.card input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    font-family: 'Smooch Sans', sans-serif;
+    color: white;
+    border-bottom: 2px solid #787ff6;
+}
+.card input:focus{
+    background: linear-gradient(55deg, #787ff6, #010517);
+    border-radius: 20px;
+    color: white;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+
+.login {
+    text-decoration: none;
+    color: #787ff6;
+    margin-left: 45%;
+    margin-top: 20%;
+}
+
+.login:hover{
+    background: #787ff6;
+    width: 100%;
+    height: 90px;
+    color: white;
+    border-radius: 6px;
+}
+
+
+#result{
+    color: red;
+}
+#cat{
+    margin-left: 30%;
+    position: relative;
+    border-radius: 50%;
+    display: none;
+}
+.audio-container {
+    display: none;
+}
+
+
+@media screen and (max-width: 375px ) {
+.navbar-brand{
+    margin-left: 8%;
+}
+#cat{
+    margin-left: 8%;
+}
+}
+
+@media screen and (max-width: 360px ) {
+    .navbar-brand{
+        margin-left: 0;
+    }
+    #cat{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .navbar-brand{
+        margin-left: 10%;
+    }
+    #cat{
+        margin-left: 10%;
+    }
+
+ }
+
+ @media screen and (max-width: 430px) {
+    .navbar-brand{
+        margin-left: 13%;
+    }
+    #cat{
+        margin-left: 13%;
+    }
+
+ }
+

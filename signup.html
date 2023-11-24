@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="css/signup.css">
     <link rel="icon" href="img/sneaker.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,9 @@
 	  <link rel="preconnect" href="https://fonts.googleapis.com">
 	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -49,6 +52,11 @@
         Your browser does not support the video tag.
     </video>
 </div>
+  <div class="audio-container">
+    <audio id="myAudio" controls>
+      <source src="cat.mp3" type="audio/mp3">
+  </audio>
+  </div>
 <div class="mask d-flex align-items-center h-100">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -56,14 +64,18 @@
         <div class="card" style="border-radius: 15px;">
           <div class="card-body p-5">
             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-
+            <p id="result"></p>
+            <img id="cat" src="img/cat-cute.gif" alt="">
+            <div class="row" style="margin-top: 80px;">
+              <div class="center">
+                <a class="navbar-brand" href="home.html"><i class="fa-solid fa-shoe-prints" style="color: #ffffff;"></i>&nbsp;STYLISH STEPS</a>
+              </div>
+            </div>
             <form>
-
               <div class="form-outline mb-4">
                 <input type="text" id="name" class="form-control form-control-lg" />
                 <label class="form-label">Your Name</label>
               </div>
-
               <div class="form-outline mb-4">
                 <input type="email" id="email" class="form-control form-control-lg" />
                 <label class="form-label" >Your Email</label>
