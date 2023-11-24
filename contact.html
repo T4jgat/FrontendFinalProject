@@ -18,12 +18,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Smooch+Sans&family=Ubuntu:ital,wght@1,500&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="catalog.css"> -->
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="catalog.css">
 
 
-    <title>Document</title>
+    <title>Contact Us</title>
 </head>
 
 <body>
@@ -86,7 +89,7 @@
                   <label for="name">Name:</label>
                   <input type="text" class="form-control" id="name" required>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="nextStep('step1', 'step2')">Next</button>
+                <button type="button" class="btn btn_next" onclick="nextStep('step1', 'step2')"><i class="fa-solid fa-arrow-right"></i></button>
               </div>
 
               <!-- Step 2 -->
@@ -95,8 +98,8 @@
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" id="email" required>
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="prevStep('step2', 'step1')">Previous</button>
-                <button type="button" class="btn btn-primary" onclick="nextStep('step2', 'step3')">Next</button>
+                <button type="button" class="btn btn_prev" onclick="prevStep('step2', 'step1')"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="button" class="btn btn_next" onclick="nextStep('step2', 'step3')"><i class="fa-solid fa-arrow-right"></i></button>
               </div>
 
               <!-- Step 3 -->
@@ -105,8 +108,14 @@
                   <label for="message">Message:</label>
                   <textarea class="form-control" id="message" rows="3" required></textarea>
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="prevStep('step3', 'step2')">Previous</button>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn_prev" onclick="prevStep('step3', 'step2')"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="submit" class="btn btn-success" id="submit">SUBMIT</button>
+                <div class="loader">
+                  <div class="check">
+                    <span class="check-one"></span>
+                    <span class="check-two"></span>
+                  </div>
+                </div>
               </div>
             </form>
 
@@ -120,25 +129,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-  
-
-
-
-
-  <button class="open-button" onclick="openForm()">Chat</button>
-
-  <div class="chat-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
-          <i class="fa-solid fa-chalkboard-user"></i>
-          <h3>Chat with us</h3>
-
-          <label for="msg">Message</label>
-          <textarea placeholder="Type message.." name="msg" required></textarea>
-
-          <button type="submit" class="btn">Send</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
-  </div>
 </main>
 
 
