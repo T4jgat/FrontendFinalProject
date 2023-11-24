@@ -2,82 +2,83 @@ document.addEventListener("DOMContentLoaded", function () {
   var teamMemberImages = document.querySelectorAll('.team-member-avatar');
 
   teamMemberImages.forEach(function (image) {
-      image.addEventListener('click', function () {
-          openFullscreenModal(image.src);
-      });
+    image.addEventListener('click', function () {
+      openFullscreenModal(image.src);
+    });
   });
 
   function openFullscreenModal(imageSrc) {
-      var fullscreenModal = document.getElementById('fullscreen-modal');
-      var fullscreenImage = document.getElementById('fullscreen-image');
+    var fullscreenModal = document.getElementById('fullscreen-modal');
+    var fullscreenImage = document.getElementById('fullscreen-image');
 
-      fullscreenImage.src = imageSrc;
-      fullscreenModal.style.display = 'block';
+    fullscreenImage.src = imageSrc;
+    fullscreenModal.style.display = 'block';
   }
 
   window.closeFullscreenModal = function () {
-      var fullscreenModal = document.getElementById('fullscreen-modal');
-      fullscreenModal.style.display = 'none';
+    var fullscreenModal = document.getElementById('fullscreen-modal');
+    fullscreenModal.style.display = 'none';
   };
   let toTop = document.getElementById("topBtn");
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-    toTop.style.display = "block";
-  } else {
-    toTop.style.display = "none";
-  }
-};
+  window.onscroll = function () {
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+      toTop.style.display = "block";
+    } else {
+      toTop.style.display = "none";
+    }
+  };
 
 });
 
-function signinPage(){
-window.location.href = "signin.html"
+function signinPage() {
+  window.location.href = "signin.html"
 }
 
-function catalogPage(){
+function catalogPage() {
   window.location.href = "catalog.html"
-  }
-
-function homePage(){
-window.location.href = "home.html"
 }
 
-function google(){
-window.location.href = "https://accounts.google.com/InteractiveLogin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgoogle%2Bfonts%26rlz%3D1C5CHFA_enKZ1042KZ1042%26oq%3Dgoogle%26gs_lcrp%3DEgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGEEyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEHSAQc4MTlqMGo3qAIAsAIA%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ru&passive=true&ifkv=AVQVeyy4wEzZfb5UFIzFekmSJvtiJVl7E0qxnpCA5uGpw4jmldd4tccwbS3VGwxZAT68Xbf8CX18fA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+function homePage() {
+  window.location.href = "home.html"
 }
 
-function microsoft(){
-window.location.href = "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=16&ct=1700432616&rver=7.3.6960.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2frpsauth%2fv1%2faccount%2fSignInCallback%3fstate%3deyJSdSI6Imh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vcnUta3oiLCJMYyI6IjQwOTYiLCJIb3N0Ijoid3d3Lm1pY3Jvc29mdC5jb20ifQ&lc=1033&id=74335&aadredir=0"
+function google() {
+  window.location.href = "https://accounts.google.com/InteractiveLogin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgoogle%2Bfonts%26rlz%3D1C5CHFA_enKZ1042KZ1042%26oq%3Dgoogle%26gs_lcrp%3DEgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGEEyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEHSAQc4MTlqMGo3qAIAsAIA%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ru&passive=true&ifkv=AVQVeyy4wEzZfb5UFIzFekmSJvtiJVl7E0qxnpCA5uGpw4jmldd4tccwbS3VGwxZAT68Xbf8CX18fA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+}
+
+function microsoft() {
+  window.location.href = "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=16&ct=1700432616&rver=7.3.6960.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2frpsauth%2fv1%2faccount%2fSignInCallback%3fstate%3deyJSdSI6Imh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vcnUta3oiLCJMYyI6IjQwOTYiLCJIb3N0Ijoid3d3Lm1pY3Jvc29mdC5jb20ifQ&lc=1033&id=74335&aadredir=0"
 }
 
 var continuee = document.getElementById('continueBtn');
 
 
 function onEntry(entry) {
-entry.forEach(change => {
-  if (change.isIntersecting) {
-   change.target.classList.add('element-show');
-  }
-});
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
 }
 
 let options = {
-threshold: [0.5] };
+  threshold: [0.5]
+};
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.element-animation');
 
 for (let elm of elements) {
-observer.observe(elm);
+  observer.observe(elm);
 }
 
 
 function modalPage() {
-document.getElementById('myModall').style.display = 'block';
+  document.getElementById('myModall').style.display = 'block';
 }
 
 function closeModall() {
-document.getElementById('myModall').style.display = 'none';
+  document.getElementById('myModall').style.display = 'none';
 }
 
 let signinForm = document.querySelector('.signin_container');
@@ -86,27 +87,27 @@ let pass = document.getElementById('passInput');
 
 
 signinForm.addEventListener("submit", (e) => {
-e.preventDefault();
-console.log ("Email: ", email.value); console. log ("Pass: ", pass.value);
+  e.preventDefault();
+  console.log("Email: ", email.value); console.log("Pass: ", pass.value);
 });
 
 
-function validation(){
-  if(document.FormFill.Email.value == ""){
+function validation() {
+  if (document.FormFill.Email.value == "") {
     document.getElementById('result').innerHTML = "Input Email";
-    }
-    else if(document.FormFill.Password.value == ""){
-      document.getElementById('result').innerHTML = "Input Password";
-    }
-    else if(document.FormFill.Email.value !== "park.pavel74@gmail.com"){
-      document.getElementById('result').innerHTML = "Email is Incorrect";
-      return false;
-    }
-    else if(document.FormFill.Password.value !== "123"){
-      document.getElementById('result').innerHTML = "Password is Incorrect";
-      return false;
-    }
-    else{
+  }
+  else if (document.FormFill.Password.value == "") {
+    document.getElementById('result').innerHTML = "Input Password";
+  }
+  else if (document.FormFill.Email.value !== "park.pavel74@gmail.com") {
+    document.getElementById('result').innerHTML = "Email is Incorrect";
+    return false;
+  }
+  else if (document.FormFill.Password.value !== "123") {
+    document.getElementById('result').innerHTML = "Password is Incorrect";
+    return false;
+  }
+  else {
     const notification = document.querySelector('.notification');
     const button = document.querySelector('.trigger-button');
 
@@ -115,31 +116,38 @@ function validation(){
 
 
     document.addEventListener("click", (event) => {
-    document.getElementById('result').innerHTML = " ";
-    const isClickInsideNotification = notification.contains(event.target);
-    const isButtonClicked = button.contains(event.target);
-    
-    if (!isClickInsideNotification && !isButtonClicked) {
-      setTimeout(() => {
-        notification.classList.add('hide');
-   }, 5000);
-    }
-});
+      document.getElementById('result').innerHTML = " ";
+      const isClickInsideNotification = notification.contains(event.target);
+      const isButtonClicked = button.contains(event.target);
+
+      if (!isClickInsideNotification && !isButtonClicked) {
+        setTimeout(() => {
+          notification.classList.add('hide');
+        }, 5000);
+      }
+    });
 
 
   }
 }
 
 
-function signupPage(){
+function signupPage() {
   window.location.href = "signup.html";
 }
 
 //SCROLL TO TOP
-function topPage() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0;
+function ScrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
+
+// function topPage() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
 
 // Sign up
 

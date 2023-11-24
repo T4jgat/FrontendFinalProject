@@ -1,0 +1,87 @@
+.drag-n-drop-game {
+    background-color: #fff;
+    padding: 40px 50px 40px 0px;
+    border-radius: 20px;
+}
+
+main {
+    height: 800px;
+}
+
+@media (max-width: 990px) {
+    main {
+        height: 900px;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        height: 1100px;
+    }
+}
+
+@media (max-width: 1450px) {
+    main {
+        height: 1000px;
+    }
+}
+
+.game-title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.reset-button {
+    background-color: rgb(31, 0, 171);
+    color: #fff;
+}
+
+section.draggable-elements,
+section.droppable-elements {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 1.5rem;
+}
+
+div.draggable,
+div.droppable {
+    display: grid;
+    place-content: center;
+
+    width: 6rem;
+    aspect-ratio: 1.25 / 1;
+
+    border-radius: 20px;
+    background-color: gray;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.draggable:hover {
+    opacity: 0.7;
+}
+
+.draggable.dragged {
+    opacity: .3;
+    cursor: default;
+}
+
+.droppable {
+    outline: 3px gray;
+    background-color: gray;
+}
+
+.droppable.droppable-hover {
+    outline-width: 4px;
+    background-color: gray;
+}
+
+.droppable.dropped {
+    outline: 2px solid gray;
+    color: #fff;
+}

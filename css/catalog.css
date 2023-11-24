@@ -143,3 +143,9 @@ main {
     font-size: 18px;
     color: #1974D2;
 }
+
+.scroll-to-top {
+    background-color: #010554;
+    bottom: 50px;
+    left: 50px;
+}
