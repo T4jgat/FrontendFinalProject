@@ -145,7 +145,7 @@ main {
 }
 
 .scroll-to-top {
-    background-color: #010554;
+    background-color: transparent;
     bottom: 50px;
     left: 50px;
 }
