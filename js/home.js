@@ -43,7 +43,7 @@ function gamePage() {
 }
 
 function homePage() {
-  window.location.href = "home.html"
+  window.location.href = "index.html"
 }
 
 function google() {
@@ -75,7 +75,7 @@ for (let elm of elements) {
   observer.observe(elm);
 }
 
-function contactPage(){
+function contactPage() {
   window.location.href = "contact.html";
 }
 

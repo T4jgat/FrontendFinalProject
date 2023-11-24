@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+ocument.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('video');
     var videoContainer = document.getElementById('video-container');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function homePage(){
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
 
 function loginPage(){
