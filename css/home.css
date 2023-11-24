@@ -591,5 +591,45 @@ footer p {
     border: none;
     border-radius: 50px;
 
-    cursor: pointer;
+  cursor: pointer; 
+}
+@media (max-width: 375px) {
+    body{
+        grid-column: auto;
+    }
+    .navbar-brand{
+        font-size: 20px;
+    }
+    .main_content img {
+        display: none;
+    }
+
+    .main_text p {
+        width: 295px;
+    }
+    .main_text h1 span {
+        font-size: 59px;
+    }
+
+    .main_content .list-group{
+        margin-top: 40%;
+    }
+    .slider__item {
+        aspect-ratio: 0.6666666667;
+        min-width: calc((100% / 1) - 5rem);
+    }
+    .buyBtn{
+        width: 135px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider{
+        width: 45%;
+    }
+    .main_content img {
+        display: block;
+        width: 280px;
+    }
 }

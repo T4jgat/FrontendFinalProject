@@ -73,16 +73,31 @@ main {
     font-size: 35px;
     font-family: "ColfaxAI", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
 }
-
-input {
-    width: 350px;
-    height: 58px;
+input{
+    width:320px;
     outline: none;
+    color: white;
     padding-left: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    transition: 0.3s ease-in;
 }
 
-input::placeholder {
-    font-size: 19px;
+input::placeholder{
+    color: white;
+}
+input:focus{
+    transform: translateY(-5%);
+    color: white;
+    border: 2px solid #787ff6;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.605);
+}
+
+label{
+    color: white;
 }
 
 .continue {
@@ -176,6 +191,7 @@ a:hover {
     justify-content: space-between;
     gap: 16px;
     font-size: clamp(0.8rem, 3vw, 1.2rem);
+    
 }
 
 .notification__body__first {
@@ -185,6 +201,7 @@ a:hover {
     align-items: center;
     font-family: 'Kdam Thmor Pro', sans-serif;
     gap: 8px;
+    
 }
 
 @keyframes fadeInAnimation {
