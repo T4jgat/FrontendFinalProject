@@ -29,20 +29,34 @@ function validateForm(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var repeatPassword = document.getElementById('cpassword').value;
+    var audio = document.getElementById('myAudio');
 
 
     if (name === '' || email === '' || password === '' || repeatPassword === '') {
-        alert('All fields must be filled out');
+        document.getElementById('result').innerHTML = "All fields must be filled out";
+        document.getElementById('cat').style.display = "none";
         return;
     }
     else if (password !== repeatPassword) {
-        alert('Passwords do not match');
+        document.getElementById('result').innerHTML = "Passwords do not match";
+        document.getElementById('cat').style.display = "none";
+        audio.remove();
         return;
     }
 
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert('Invalid email address');
+      document.getElementById('result').innerHTML = "Invalid email address";
+      document.getElementById('cat').style.display = "none";
       return;
+    }
+    else{
+        document.getElementById('result').innerHTML = "";
+        document.getElementById('cat').style.display = "block";
+        audio.play();
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("cpassword").value = "";
     }
 }
