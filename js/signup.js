@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function homePage(){
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
 
 function loginPage(){
