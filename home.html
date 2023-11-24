@@ -32,7 +32,7 @@
 
   <div class="scroll-container">
     <button class="scroll-to-top" onclick="ScrollToTop()">
-      <img src="img/up-arrow-svgrepo-com.png" width="24" height="24" alt="">
+      <i class="fa-solid fa-arrow-up"></i>
     </button>
   </div>
 
@@ -55,7 +55,10 @@
                 <a class="nav-link" onclick="catalogPage()">CATALOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">CONTACT US</a>
+                <a class="nav-link" onclick="gamePage()">PLAY GAME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="contactPage()">CONTACT US</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -93,8 +96,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="slider" x-data="{start: true, end: false}" style="padding-top: 100px;">
         <div class="slider__content" x-ref="slider"
           x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
@@ -171,8 +172,6 @@
           The page is currently unavailable...</p>
         <img src="img/cat-cute.gif" alt="">
       </div>
-      <button onclick="scrollToTop()" id="scroll" class="scrollTop"><i class="fa-solid fa-arrow-up"
-          style="color: #000000;"></i></button>
 
   </main>
 

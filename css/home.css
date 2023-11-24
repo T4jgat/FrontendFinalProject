@@ -582,14 +582,223 @@ footer p {
     bottom: 50px;
     right: 50px;
 
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 
-    color: black;
-    background-color: #010554;
+    font-size: 32px;
+    color: #010517;
+    background-color: transparent;
 
     border: none;
     border-radius: 50px;
 
     cursor: pointer;
 }
+
+/* Mobile S*/
+@media only screen and (max-width: 320px) {
+    .slider {
+        width: 70%;
+    }
+    .main_content{
+        display:grid;
+        grid-template-columns: auto;
+    }
+    .main_content img{
+        width: 180px;
+    }
+    .main_content .list-group {
+        display: none;
+    }
+    .main_text p {
+        width: 195px;
+    }
+    .main_text h1 span {
+        font-size: 45px;
+    }
+    .shop-container {
+        height: 1000px;
+    }
+    .buyBtn {
+        margin-left: 23%;
+    }
+
+    #team-members{
+        display: grid;
+        flex-direction: column;
+    }
+
+}
+  
+  /* Mobile M */
+  @media only screen and (min-width: 321px) and (max-width: 480px) {
+    .slider {
+        width: 70%;
+    }
+    .main_content{
+        display:grid;
+        grid-template-columns: auto;
+    }
+    .main_content img{
+        width: 230px;
+    }
+    .main_content .list-group {
+        display: none;
+    }
+    .main_text p {
+        width: 240px;
+    }
+    .main_text h1 span {
+        font-size: 50px;
+    }
+    .shop-container {
+        height: 1000px;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .slider {
+        width: 70%;
+    }
+    .main_content{
+        display:flex;
+        position: absolute;
+    }
+    .main_content img{
+        width: 330px;
+        margin-left: 15%;
+    }
+    .main_content .list-group {
+        margin-top: 90%;
+        display: flex;
+        margin-left: 50%;
+        width: 240px;
+    }
+    .main_text p {
+        width: 240px;
+    }
+    .main_text h1 span {
+        font-size: 50px;
+    }
+    .shop-container {
+        height: 1000px;
+    }
+  }
+
+
+  @media only screen and (min-width: 912px) and (max-width: 1020px) {
+    .navbar-expand-lg .navbar-collapse{
+        display: grid !important;
+    } 
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+    .signInBtn{
+        margin-left: 30%;
+    }
+    .main_content img{
+        top: -320px !important;
+        left: 255px !important;
+        width: 470px !important;
+    }
+}
+  @media only screen and (min-width: 540px) {
+    .slider {
+        width: 70%;
+    }
+    .main_content{
+        display:grid;
+        grid-template-columns: auto;
+    }
+    .main_content img{
+        width: 230px;
+    }
+    .main_content .list-group {
+        display: none;
+    }
+    .main_text p {
+        width: 240px;
+    }
+    .main_text h1 span {
+        font-size: 50px;
+    }
+    .shop-container {
+        height: 1000px;
+    }
+  }
+
+  /* Laptop */
+  @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+.navbar-expand-lg .navbar-collapse{
+    display: grid !important;
+} 
+.navbar-nav .nav-link {
+    font-size: 16px;
+}
+.signInBtn{
+    margin-left: 30%;
+}
+
+.main_content{
+    justify-content: space-between;
+}
+.main_content img{
+    top: -320px !important;
+    left: 435px !important;
+    width: 470px !important;
+}
+}
+  
+  /* Laptop L */
+  @media only screen and (min-width: 1367px) {
+    .main_text p {
+        width: 600px;
+        text-align: justify;
+        line-height: 21px;
+        position: relative;
+        color: white;
+        top: 85px;
+        font-family: 'Kanit', sans-serif;
+        left: 5%;
+    }
+    .main_content{
+        position: absolute !important;
+    }
+    .main_content img{
+        top: -120px !important;
+        left: 835px !important;
+        width: 470px !important;
+    }
+    .main_text h1 {
+        font-size: 90px;
+        line-height: 70px;
+        font-family: 'Exo', sans-serif;
+        background: linear-gradient(75deg, #787ff6, #70E000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        top: 45px;
+        left: 5%;
+    }
+    
+    .main_text h1 span {
+        font-size: 70px;
+        margin-top: 45px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        background: linear-gradient(to right, #787ff6, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navbar-expand-lg .navbar-collapse{
+        display: grid;
+        flex-direction: row;
+    } 
+
+    .signInBtn{
+        margin-right: 15%;
+        margin-top: 0;
+        position: absolute;
+    }
+  }
+  

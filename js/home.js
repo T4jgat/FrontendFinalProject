@@ -38,6 +38,9 @@ function signinPage() {
 function catalogPage() {
   window.location.href = "catalog.html"
 }
+function gamePage() {
+  window.location.href = "dragndrop.html"
+}
 
 function homePage() {
   window.location.href = "home.html"
@@ -70,6 +73,10 @@ let elements = document.querySelectorAll('.element-animation');
 
 for (let elm of elements) {
   observer.observe(elm);
+}
+
+function contactPage(){
+  window.location.href = "contact.html";
 }
 
 

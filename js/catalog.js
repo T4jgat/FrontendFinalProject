@@ -16,3 +16,9 @@ function signinPage() {
 function signinPage() {
     window.location.href = "signin.html"
 }
+function ScrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+}
