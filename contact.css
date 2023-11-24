@@ -17,6 +17,23 @@ body {
 }
 
 
+@media (max-width: 990px){
+    .signInBtn{
+        margin-left: 40%;
+    }
+}
+@media (max-width: 580px){
+    .signInBtn{
+        margin-left: 35%;
+    }
+}
+@media (max-width: 375px){
+    .signInBtn{
+        margin-left: 30%;
+    }
+}
+
+
 
 
 
