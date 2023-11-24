@@ -143,3 +143,25 @@ main {
     font-size: 18px;
     color: #1974D2;
 }
+
+#catalog{
+    height: auto;
+}
+
+
+@media screen and (min-width: 375px) {
+    body{
+        grid-column: auto;
+    }
+    .navbar-brand{
+        font-size: 20px;
+    }
+    .box {
+        display: none;
+    }
+
+    .card-img, .card-img-bottom, .card-img-top{
+        width: 50%;
+    }
+
+}
