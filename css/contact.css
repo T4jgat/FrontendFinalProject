@@ -192,3 +192,89 @@ body {
     border-color: #787ff6;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .form-control{
+    width: 200px;
+  }
+  .btn_next{
+    width: 45px;
+  }
+  .btn_prev{
+    width: 45px;
+    right: 65%;
+  }
+  #submit{
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    margin-top: 40%;
+    margin-left: 15%;
+    position: relative;
+    display: block;
+    height: 30px;
+    border-radius: 18px;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+/* Mobile M */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .signInBtn{
+    color: red;
+  }
+  .btn_next{
+    background: white;
+  position: absolute;
+  right: 15%;
+  width: 90px;
+  border: none;
+  border-radius: 20px;
+  color: black;
+  font-size: 23px;
+  transition: 0.3s ease-out;
+  }
+  .btn_prev{
+    background: #787ff6;
+    position: absolute;
+    right: 50%;
+    width: 90px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 23px;
+    transition: 0.3s ease-out;
+  }
+  .form-control{
+    width: 400px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+
+@media only screen and (min-width: 912px) and (max-width: 1020px) {
+  
+}
+
+@media only screen and (min-width: 540px) {
+  
+}
+
+/* Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  
+}
+
+/* Laptop L */
+@media only screen and (min-width: 1367px) {
+ 
+}
